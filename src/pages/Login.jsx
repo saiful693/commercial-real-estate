@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-    const {logIn, logInWithGoogle}=useContext(AuthContext);
+    const {logIn, logInWithGoogle, logInWithGithub}=useContext(AuthContext);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -29,6 +29,16 @@ const Login = () => {
         logInWithGoogle()
         .then(()=>{
             toast.success("User google login successfully!");
+        })
+        .catch(error=>{
+            toast.error("Error registering user: " + error.message);
+        })
+    }
+
+    const handleGithubLogin=()=>{
+        logInWithGithub()
+        .then(()=>{
+            toast.success("User Github login successfully!");
         })
         .catch(error=>{
             toast.error("Error registering user: " + error.message);
@@ -63,7 +73,7 @@ const Login = () => {
                 <FcGoogle />
                     Login with Google
                 </button>
-                <button className=" btn border border-blue-200">
+                <button onClick={handleGithubLogin} className=" btn border border-blue-200">
                 <FaGithub />
                     Login with Github
                 </button>

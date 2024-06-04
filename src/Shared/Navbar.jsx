@@ -10,7 +10,7 @@ import { Tooltip } from 'react-tooltip'
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
-    console.log(user)
+    // console.log(user)
 
     const handleLogOut=()=>{
         logOut()
@@ -62,12 +62,12 @@ const Navbar = () => {
                                     <Tooltip id="my-tooltip" />
                                 </div>
                             </div>
-                            <button onClick={handleLogOut} className="btn">LogOut</button>
+                            <button onClick={handleLogOut} className="btn bg-green-400 text-white text-lg font-semibold">LogOut</button>
                         </div>
 
                         :
                         <Link to="/login">
-                            <button className="btn text-white">Login</button>
+                            <button className="btn bg-green-400 text-white text-lg font-semibold">Login</button>
                         </Link>
 
                 }
