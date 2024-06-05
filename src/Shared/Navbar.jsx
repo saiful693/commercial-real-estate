@@ -44,7 +44,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="flex items-center text-4xl font-bold uppercase text-green-500"><MdOutlineRealEstateAgent className="mr-2" />Benaa</a>
+                <a className="flex items-center text-xl md:text-3xl lg:text-4xl font-bold uppercase text-green-500"><MdOutlineRealEstateAgent className="mr-2" />Benaa</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal space-x-4  px-1">
@@ -64,7 +64,7 @@ const Navbar = () => {
                                     <Tooltip id="my-tooltip" />
                                 </div>
                             </div>
-                            <button onClick={handleLogOut} className="btn bg-green-400 text-white text-lg font-semibold">LogOut</button>
+                            <button onClick={handleLogOut} className="btn bg-green-400 text-white lg:text-lg font-semibold">LogOut</button>
                         </div>
                         :
                         <Link to="/login">

@@ -19,12 +19,12 @@ const Support = () => {
                     <div className="max-w-full py-32">
                         <h1 className="mb-5 text-5xl font-bold">LEGAL SERVICES SUPPORT</h1>
                         <p className="mb-5 text-2xl font-bold">MUTATION | PERMISSION | DEED | PLAN & AMP | NEC | C.S. S.A. R.S. | MOUZA MAP | CERTIFICATIONS</p>
-                        <button className="mr-10 btn btn-lg bg-green-800 border-none text-2xl text-white">Apply For Legal Services</button>
-                        <button className="btn btn-lg text-green-800 border-none text-2xl bg-white">View All Services</button>
+                        <button className="lg:mr-10 md:mr-6 mb-5 btn btn-lg bg-green-800 border-none md:text-2xl text-white">Apply For Legal Services</button>
+                        <button className="btn btn-lg text-green-800 border-none md:text-2xl bg-white">View All Services</button>
                     </div>
                 </div>
             </div>
-            <div className="bg-gray-200 py-15 px-10 h-40 mt-10 flex items-center rounded-xl rounded-b-none">
+            <div className="bg-gray-200 py-15 px-10 lg:h-40 mt-10 flex items-center rounded-xl rounded-b-none">
                 <p className="text-xl">There are many legal documents and processes that need to be managed and handled during any property transaction. This can range from formally having your name appear against the government’s records to even having the permission to sell a property in the first place. Bproperty Legal services take care of all this to ensure you do not get lost in the paperwork and can focus entirely on the property transaction.</p>
             </div>
 
@@ -40,7 +40,7 @@ const Support = () => {
             </div>
             <div className="mt-10">
                 <h2 className="text-2xl mb-2">Document Withdrawl Services</h2>
-                <ul className="grid grid-cols-2">
+                <ul className="grid md:grid-cols-2 ml-2">
                     {
 
                         services.map(service =>

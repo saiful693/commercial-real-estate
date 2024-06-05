@@ -19,7 +19,7 @@ const EstateDetails = () => {
             <Helmet>
                 <title>Benaa | Estate Details | {id}</title>
             </Helmet>
-            <figure className="rounded-none"><img src={image} alt="" className="w-full lg:h-[700px]  object-cover" /></figure>
+            <figure className="rounded-none"><img src={image} alt="" className="w-full md:h-[400px] lg:h-[700px]  object-cover" /></figure>
             <div className="card-body">
                 <p><span className="uppercase font-medium">Usdt</span> <strong className="text-xl">{price}</strong>  </p>
                 <p className="font-medium">{location}</p>
