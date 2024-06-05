@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider"
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,9 +8,14 @@ import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
+
+
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateInfo } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -18,16 +23,23 @@ const Register = () => {
 
 
     const onSubmit = async (data) => {
-        const { email, password } = data;
+
+        const { name, photo, email, password } = data;
+
         // Create user with email and password
-        createUser(email, password)
-            .then(result => {
-                console.log(result.user)
+
+        await createUser(email, password)
+            .then(() => {
                 toast.success("User registered successfully!");
+                navigate(location?.state ? location.state : '/')
+
             })
             .catch(error => {
                 toast.error("Error registering user: " + error.message);
             })
+        await updateInfo(name, photo)
+            .then()
+            .catch()
 
 
     };

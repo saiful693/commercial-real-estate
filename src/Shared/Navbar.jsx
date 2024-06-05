@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink,   } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,9 +10,9 @@ import { MdOutlineRealEstateAgent } from "react-icons/md";
 
 const Navbar = () => {
 
-    const { user, logOut } = useContext(AuthContext);
-    // console.log(user)
-
+    const {logOut, user, loading } = useContext(AuthContext);
+  
+    
     const handleLogOut=()=>{
         logOut()
         .then(()=>{
@@ -53,9 +53,10 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
-                {
-                    user ?
+           <div className="navbar-end">
+                { loading ?(
+                    <div>Loading....</div>
+                ) :user?
                         <div className="flex">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
@@ -65,7 +66,6 @@ const Navbar = () => {
                             </div>
                             <button onClick={handleLogOut} className="btn bg-green-400 text-white text-lg font-semibold">LogOut</button>
                         </div>
-
                         :
                         <Link to="/login">
                             <button className="btn bg-green-400 text-white text-lg font-semibold">Login</button>
