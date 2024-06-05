@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
@@ -9,6 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
 
     const {logIn, logInWithGoogle, logInWithGithub}=useContext(AuthContext);
+    const navigate=useNavigate();
+    const location=useLocation();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -19,6 +21,7 @@ const Login = () => {
         logIn(email, password)
         .then(()=>{
             toast.success("User login successfully!");
+            navigate(location?.state ? location.state: '/')
         })
         .catch(error=>{
             toast.error("Error registering user: " + error.message);
@@ -29,6 +32,7 @@ const Login = () => {
         logInWithGoogle()
         .then(()=>{
             toast.success("User google login successfully!");
+            navigate(location?.state ? location.state: '/')
         })
         .catch(error=>{
             toast.error("Error registering user: " + error.message);
@@ -39,6 +43,7 @@ const Login = () => {
         logInWithGithub()
         .then(()=>{
             toast.success("User Github login successfully!");
+            navigate(location?.state ? location.state: '/')
         })
         .catch(error=>{
             toast.error("Error registering user: " + error.message);

@@ -1,0 +1,113 @@
+[
+    {
+      "id": 1,
+      "service_type": "Document Withdrawal",
+      "service_title": "AC Land Mutation"
+    },
+    {
+      "id": 2,
+      "service_type": "Document Withdrawal",
+      "service_title": "Mutation permission from RAJUK/ NHA/M.P office"
+    },
+    {
+      "id": 3,
+      "service_type": "Document Withdrawal",
+      "service_title": "Deed Withdrawal"
+    },
+    {
+      "id": 4,
+      "service_type": "Document Withdrawal",
+      "service_title": "Hiba-Bil-Iwaz Deed"
+    },
+    {
+      "id": 5,
+      "service_type": "Document Withdrawal",
+      "service_title": "Title Deed"
+    },
+    {
+      "id": 6,
+      "service_type": "Document Withdrawal",
+      "service_title": "Partition Deed"
+    },
+    {
+      "id": 7,
+      "service_type": "Document Withdrawal",
+      "service_title": "Power of Attorney"
+    },
+    {
+      "id": 8,
+      "service_type": "Document Withdrawal",
+      "service_title": "Deed of Agreement"
+    },
+    {
+      "id": 9,
+      "service_type": "Document Withdrawal",
+      "service_title": "Power acceptance from RAJUK/ NHA/ M.P office"
+    },
+    {
+      "id": 10,
+      "service_type": "Document Withdrawal",
+      "service_title": "Lay-Out Plan from RAJUK"
+    },
+    {
+      "id": 11,
+      "service_type": "Document Withdrawal",
+      "service_title": "Approved Plan from RAJUK"
+    },
+    {
+      "id": 12,
+      "service_type": "Document Withdrawal",
+      "service_title": "NEC (Non-Encumbrance Certificate)"
+    },
+    {
+      "id": 13,
+      "service_type": "Document Withdrawal",
+      "service_title": "C.S. S.A. R.S. & City Jorip Porca Certified Copy"
+    },
+    {
+      "id": 14,
+      "service_type": "Document Withdrawal",
+      "service_title": "C.S. S.A. R.S & City Jorip Porca Khasra Copy"
+    },
+    {
+      "id": 15,
+      "service_type": "Document Withdrawal",
+      "service_title": "Mouza Map Tejgaon Satrastha Land Office"
+    },
+    {
+      "id": 16,
+      "service_type": "Document Withdrawal",
+      "service_title": "Occupancy Certificate from RAJUK"
+    },
+    {
+      "id": 17,
+      "service_type": "Document Withdrawal",
+      "service_title": "Succession Certificate"
+    },
+    {
+      "id": 18,
+      "service_type": "Document Withdrawal",
+      "service_title": "Permission letter of Building Reconstruction from N.H.A/RAJUK/ M.P office"
+    },
+    {
+      "id": 19,
+      "service_type": "Document Withdrawal",
+      "service_title": "Foreign Power of Attorney (Registered)"
+    },
+    {
+      "id": 20,
+      "service_type": "Document Withdrawal",
+      "service_title": "Sale permission from N.H.A/RAJUK/ M.P office"
+    },
+    {
+      "id": 21,
+      "service_type": "Vetting",
+      "service_title": "Legal Document Vetting"
+    },
+    {
+      "id": 22,
+      "service_type": "Vetting",
+      "service_title": "Document Verification"
+    }
+  ]
+  

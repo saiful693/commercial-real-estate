@@ -1,7 +1,8 @@
-
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Estate = ({ property }) => {
-    const { estate_title, segment_name, area, facilities, price, location, status, image } = property;
+    const {id, estate_title, segment_name, area, facilities, price, location, status, image } = property;
 
     return (
         <div className="card bg-white shadow-xl">
@@ -17,12 +18,17 @@ const Estate = ({ property }) => {
                 <p><strong className="mr-2">Location:</strong>{location} </p>
                 <p><strong>Price:</strong> {price} </p>
                 <div className="card-actions justify-end">
-                    <a href="" className="btn btn-primary">View Property</a>
+                    <Link to={`/estate/${id}`} className="btn btn-primary">View Property</Link>
                 </div>
             </div>
         </div>
 
     );
 };
+
+
+Estate.propTypes = {
+    property: PropTypes.object,
+}
 
 export default Estate;

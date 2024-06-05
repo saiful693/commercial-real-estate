@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
+import { MdOutlineRealEstateAgent } from "react-icons/md";
 
 
 const Navbar = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
         < >
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/update-profile">Update Profile</NavLink></li>
-            <li><NavLink to="/contact-us">Contact Us</NavLink></li>
+            <li><NavLink to="/support">Support</NavLink></li>
         </>
 
 
@@ -43,7 +44,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="text-4xl font-bold uppercase text-green-500">Benaa</a>
+                <a className="flex items-center text-4xl font-bold uppercase text-green-500"><MdOutlineRealEstateAgent className="mr-2" />Benaa</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal space-x-4  px-1">
