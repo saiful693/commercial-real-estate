@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import {  toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
@@ -52,6 +53,9 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Benaa | Login</title>
+            </Helmet>
             <h2 className="text-3xl my-8 text-center">Please login</h2>
             <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
                 <div className="form-control">

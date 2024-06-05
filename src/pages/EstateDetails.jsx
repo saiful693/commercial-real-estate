@@ -1,5 +1,6 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { LuAreaChart } from "react-icons/lu";
+import { Helmet } from "react-helmet-async";
 
 
 const EstateDetails = () => {
@@ -15,6 +16,9 @@ const EstateDetails = () => {
 
     return (
         <div className="mt-10 card bg-white shadow-xl">
+            <Helmet>
+                <title>Benaa | Estate Details | {id}</title>
+            </Helmet>
             <figure className="rounded-none"><img src={image} alt="" className="w-full lg:h-[700px]  object-cover" /></figure>
             <div className="card-body">
                 <p><span className="uppercase font-medium">Usdt</span> <strong className="text-xl">{price}</strong>  </p>

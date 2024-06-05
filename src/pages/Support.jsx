@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
 const Support = () => {
@@ -8,6 +9,9 @@ const Support = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Benaa | Support</title>
+            </Helmet>
             {/* banner */}
             <div className="hero rounded-lg" style={{ backgroundImage: 'url(https://cdn-ckdap.nitrocdn.com/ibkjcADpOVHAMmMGABlekNLKmOeXxucL/assets/images/optimized/rev-cc56d95/www.baymgmtgroup.com/wp-content/uploads/2017/09/top-reasons-choose-property-management-company.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>

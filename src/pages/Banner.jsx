@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className="carousel rounded-lg   w-full">
+        <div className="carousel rounded-lg mt-10  w-full">
             <div style={{backgroundImage: 'url(https://i.ibb.co/VHY1Sbb/slider1.jpg)'}} id="slide1" className="carousel-item bg-cover relative h-[650px]  w-full">
                <div className="flex justify-center items-center w-full">
                    <div>

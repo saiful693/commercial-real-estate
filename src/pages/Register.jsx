@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider"
-import {  toast } from "react-toastify";
+import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Register = () => {
@@ -12,25 +14,30 @@ const Register = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
+    const [showPassword, setShowPassword] = useState(false);
+
 
     const onSubmit = async (data) => {
-            const { email, password } = data;
-            // Create user with email and password
-            createUser( email, password)
-            .then(result=>{
+        const { email, password } = data;
+        // Create user with email and password
+        createUser(email, password)
+            .then(result => {
                 console.log(result.user)
                 toast.success("User registered successfully!");
             })
-            .catch(error=>{
+            .catch(error => {
                 toast.error("Error registering user: " + error.message);
             })
-           
-       
+
+
     };
 
 
     return (
         <div>
+            <Helmet>
+                <title>Benaa | Register</title>
+            </Helmet>
             <div>
                 <h2 className="text-3xl my-8 text-center">Please Register</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
@@ -69,22 +76,29 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input
-                            {...register('password', {
-                                required: "Password is required",
-                                minLength: {
-                                    value: 6,
-                                    message: "Password must be at least 6 characters"
-                                },
-                                validate: {
-                                    hasUpperCase: (value) =>
-                                        /[A-Z]/.test(value) || "Password must contain at least one uppercase letter",
-                                    hasLowerCase: (value) =>
-                                        /[a-z]/.test(value) || "Password must contain at least one lowercase letter"
-                                }
-                            })}
-                            type="password" name="password" placeholder="Password" className="input input-bordered" required />
+                        <div className="relative">
+                            <input
+                                {...register('password', {
+                                    required: "Password is required",
+                                    minLength: {
+                                        value: 6,
+                                        message: "Password must be at least 6 characters"
+                                    },
+                                    validate: {
+                                        hasUpperCase: (value) =>
+                                            /[A-Z]/.test(value) || "Password must contain at least one uppercase letter",
+                                        hasLowerCase: (value) =>
+                                            /[a-z]/.test(value) || "Password must contain at least one lowercase letter"
+                                    }
+                                })}
+                                type={showPassword ? 'text' : 'password'}
+                                name="password" placeholder="Password" className="input input-bordered  w-full" required />
+                            <span className="absolute  top-1/3 right-3" onClick={() => setShowPassword(!showPassword)}>{
+                                showPassword ? <FaEyeSlash /> : <FaEye />
+                            } </span>
+
                             {errors.password && <span className="text-red-500">{errors.password.message}</span>}
+                        </div>
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
