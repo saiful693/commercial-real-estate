@@ -1,8 +1,11 @@
-# React + Vite
+website name- Benaa
+Live URL: https://commercial-real-estate-56ac7.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+features and characteristics
+    1.Benna is a commercial real estate website
+    2.Here user can find list of commercial property
+    3.For book property user have to sign-up and sign-in ,user can also login google and github
+    4. User can also find list of legal support
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+npm package name
+    -React Hook Form

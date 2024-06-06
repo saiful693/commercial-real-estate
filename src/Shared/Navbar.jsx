@@ -10,9 +10,9 @@ import { MdOutlineRealEstateAgent } from "react-icons/md";
 
 const Navbar = () => {
 
-    const {logOut, user, loading } = useContext(AuthContext);
-  
-    
+    const {logOut, user } =useContext(AuthContext);
+
+
     const handleLogOut=()=>{
         logOut()
         .then(()=>{
@@ -54,9 +54,7 @@ const Navbar = () => {
                 </ul>
             </div>
            <div className="navbar-end">
-                { loading ?(
-                    <div>Loading....</div>
-                ) :user?
+                { user?
                         <div className="flex">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
